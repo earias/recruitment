@@ -2,18 +2,19 @@
  
 @section('content')
     <div class="row">
+        <div >{{ __('Dashboard') }}</div>
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Contact Management Web Application</h2>
             </div>
-            {{-- @if (Route::has('login'))
-                    @auth --}}
+            @if (Route::has('login'))
+                    @auth
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('users.create') }}"> Create New user</a>
             </div>
-            {{-- @endauth
+            @endauth
                
-            @endif --}}
+            @endif
         </div>
     </div>
    
@@ -38,8 +39,8 @@
             <td>{{ $user->contact }}</td>
             <td>{{ $user->email }}</td>
             <td>
-                {{-- @if (Route::has('login'))
-                    @auth --}}
+                @if (Route::has('login'))
+                    @auth
                     <form action="{{ route('users.destroy',$user->id) }}" method="POST">
    
                         <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
@@ -52,9 +53,9 @@
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                   
-                    {{-- @endauth
+                    @endauth
                
-            @endif --}}
+            @endif
              
             </td>
         </tr>
