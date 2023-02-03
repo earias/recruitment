@@ -2,7 +2,7 @@
  
 @section('content')
     <div class="row">
-        <div >{{ __('Dashboard') }}</div>
+        <div ><a href="/">BACK To Log screen</a></div>
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Contact Management Web Application</h2>
