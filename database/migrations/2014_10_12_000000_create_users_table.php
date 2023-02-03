@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->integer('contact');
             $table->string('email')->unique();
             $table->softDeletes()->nullable();
+            $table->timestamps();
         });
     }
 
