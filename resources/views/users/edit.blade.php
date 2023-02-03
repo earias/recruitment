@@ -36,8 +36,14 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Contact:</strong>
+                    <input class="form-control" name="contact" value="{{ $user->contact }}" placeholder="contact">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Email:</strong>
-                    <textarea class="form-control" style="height:150px" name="email" placeholder="Email">{{ $user->email }}</textarea>
+                    <input class="form-control"name="email" value="{{ $user->email }}" placeholder="Email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

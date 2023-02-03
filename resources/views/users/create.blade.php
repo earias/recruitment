@@ -30,19 +30,19 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
+                <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}" required>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Contact:</strong>
-                <input class="number" name="contact" placeholder="contact">
+                <input class="number" name="contact" placeholder="contact" value="{{ old('contact') }}" required>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>email:</strong>
-                <input class="form-control" name="email" placeholder="Email">
+                <input class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

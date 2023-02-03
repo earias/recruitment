@@ -6,9 +6,14 @@
             <div class="pull-left">
                 <h2>Contact Management Web Application</h2>
             </div>
+            {{-- @if (Route::has('login'))
+                    @auth --}}
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('users.create') }}"> Create New user</a>
             </div>
+            {{-- @endauth
+               
+            @endif --}}
         </div>
     </div>
    
@@ -33,17 +38,24 @@
             <td>{{ $user->contact }}</td>
             <td>{{ $user->email }}</td>
             <td>
-                <form action="{{ route('users.destroy',$user->id) }}" method="POST">
+                {{-- @if (Route::has('login'))
+                    @auth --}}
+                    <form action="{{ route('users.destroy',$user->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
-    
-                    <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
-   
-                    @csrf
-                    @method('DELETE')
-      
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+                        <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
+        
+                        <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+       
+                        @csrf
+                        @method('DELETE')
+          
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                  
+                    {{-- @endauth
+               
+            @endif --}}
+             
             </td>
         </tr>
         @endforeach

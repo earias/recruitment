@@ -43,9 +43,9 @@ class UserController extends Controller
         //return $request;
 
         $request->validate([
-            'name' => 'required',
-            'contact' => 'required',
-            'email' => 'required',
+            'name' => 'required|min:5',
+            'contact' => 'required|min:9|max:9|unique:users,contact',
+            'email' => 'required|email|unique:users,email',
         ]);
     
         User::create($request->all());
@@ -87,6 +87,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'contact' => 'required',
             'email' => 'required',
         ]);
     
